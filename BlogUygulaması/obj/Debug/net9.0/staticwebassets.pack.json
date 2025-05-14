@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\image.jpg",
+      "PackagePath": "staticwebassets\\img\\image.jpg"
+    },
+    {
       "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

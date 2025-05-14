@@ -1,3 +1,5 @@
+/* Topbar Css Dosyaları */
+
 #accountbar {
   width: 43px;
   height: 45px;
@@ -6,9 +8,98 @@
 
 #topbar-sign {
   color: #000000;
+  margin-top: 10px;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.searchbutton {
+  border-radius: 16px;
+  border: 1px solid #000;
+  background: #D75E5E;
+}
+
+#topbar-link {
+  text-decoration: none;
+}
+
+#topbar-text {
+  width: 125px;
+  border-radius: 13px;
+  padding: 10px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* home */
+
+#home {
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  margin-right: 55px;
+  border-radius: 20px;
+}
+
+#home-1 {
+  border: none;
+  padding-left: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  padding: 20px;
+  width: 495px;
+}
+
+#sonyazılanlar {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#home-img {
+  width: 110px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+/* Bloglar */
+
+#card-head {
+  color: #000;
+  font-family: Italiana;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#home-card-disagn {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+}
+
+#card-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+  text-align: left;
+}
+
+
+/* Footer */
+
+#Name {
+  margin-left: 200px;
+}
+
+#imza {
+  margin-left: 360px;
+  width: 107.29px;
+  height: 56.996px;
 }

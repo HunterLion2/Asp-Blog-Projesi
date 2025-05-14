@@ -12,16 +12,17 @@
     <header>
         @await Html.PartialAsync("Partials/Site/_Topbar")
     </header>
+
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - BlogUygulaması 
-        </div>
+    <hr class="container">
+
+    <footer>
+        @await Html.PartialAsync("Partials/Site/_Footer")
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

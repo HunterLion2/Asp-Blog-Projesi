@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kKyA/muxXZpvki12HVAGLVJ6hbtki2llB7I3TE/LKX8=",
+  "Hash": "3VpLTPz7pf1YN9PAg0TKjJB0rt8s+bD3wUofnpWbNYU=",
   "Source": "BlogUygulaması",
   "BasePath": "_content/BlogUygulaması",
   "Mode": "Default",
@@ -164,12 +164,12 @@
       "OriginalItemSpec": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-5xqmc7hsmv.gz",
+      "Identity": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-cbbx80gqxq.gz",
       "SourceId": "BlogUygulaması",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BlogUygulaması",
-      "RelativePath": "css/site#[.{fingerprint=5xqmc7hsmv}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=cbbx80gqxq}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -178,8 +178,8 @@
       "RelatedAsset": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5ks0rhaewg",
-      "Integrity": "lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0=",
+      "Fingerprint": "gxpt3zfvcn",
+      "Integrity": "hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\css\\site.css"
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5xqmc7hsmv",
-      "Integrity": "N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU=",
+      "Fingerprint": "cbbx80gqxq",
+      "Integrity": "iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1359,6 +1359,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\image.jpg",
+      "SourceId": "BlogUygulaması",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\",
+      "BasePath": "_content/BlogUygulaması",
+      "RelativePath": "img/image#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9x0oyknxiu",
+      "Integrity": "UwMoZLOA52K9qMmmFvTRloD6LOAyutqAKsZ6HrRY4bM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\image.jpg"
     },
     {
       "Identity": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\js\\site.js",
@@ -2644,13 +2665,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.5xqmc7hsmv.css",
-      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-5xqmc7hsmv.gz",
+      "Route": "css/site.cbbx80gqxq.css",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-cbbx80gqxq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.006172839506"
+          "Quality": "0.002336448598"
         }
       ],
       "ResponseHeaders": [
@@ -2660,15 +2681,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "161"
+          "Value": "427"
         },
         {
           "Name": "ETag",
-          "Value": "\"lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0=\""
+          "Value": "\"hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2688,13 +2709,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU=\""
+          "Value": "W/\"iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5xqmc7hsmv"
+          "Value": "cbbx80gqxq"
         },
         {
           "Name": "label",
@@ -2702,12 +2723,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU="
+          "Value": "sha256-iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8="
         }
       ]
     },
     {
-      "Route": "css/site.5xqmc7hsmv.css",
+      "Route": "css/site.cbbx80gqxq.css",
       "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2717,7 +2738,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "219"
+          "Value": "991"
         },
         {
           "Name": "Content-Type",
@@ -2725,11 +2746,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU=\""
+          "Value": "\"iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2739,7 +2760,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5xqmc7hsmv"
+          "Value": "cbbx80gqxq"
         },
         {
           "Name": "label",
@@ -2747,13 +2768,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU="
+          "Value": "sha256-iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8="
         }
       ]
     },
     {
-      "Route": "css/site.5xqmc7hsmv.css.gz",
-      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-5xqmc7hsmv.gz",
+      "Route": "css/site.cbbx80gqxq.css.gz",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-cbbx80gqxq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2762,7 +2783,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "161"
+          "Value": "427"
         },
         {
           "Name": "Content-Type",
@@ -2770,11 +2791,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0=\""
+          "Value": "\"hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2792,7 +2813,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5xqmc7hsmv"
+          "Value": "cbbx80gqxq"
         },
         {
           "Name": "label",
@@ -2800,18 +2821,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0="
+          "Value": "sha256-hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk="
         }
       ]
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-5xqmc7hsmv.gz",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-cbbx80gqxq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.006172839506"
+          "Quality": "0.002336448598"
         }
       ],
       "ResponseHeaders": [
@@ -2821,15 +2842,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "161"
+          "Value": "427"
         },
         {
           "Name": "ETag",
-          "Value": "\"lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0=\""
+          "Value": "\"hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2849,13 +2870,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU=\""
+          "Value": "W/\"iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU="
+          "Value": "sha256-iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8="
         }
       ]
     },
@@ -2870,7 +2891,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "219"
+          "Value": "991"
         },
         {
           "Name": "Content-Type",
@@ -2878,11 +2899,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU=\""
+          "Value": "\"iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2892,13 +2913,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N7YQsQ02W7y9dHMbaRDtcov0q4dAOQbBQQqFjm21mSU="
+          "Value": "sha256-iD/hq8OnWOFE8USVTPJnhrSXJuN2Uf7NcFQSaPuvF/8="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-5xqmc7hsmv.gz",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\obj\\Debug\\net9.0\\compressed\\55tqezpeld-cbbx80gqxq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2907,7 +2928,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "161"
+          "Value": "427"
         },
         {
           "Name": "Content-Type",
@@ -2915,11 +2936,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0=\""
+          "Value": "\"hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 12:57:49 GMT"
+          "Value": "Wed, 14 May 2025 14:32:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2937,7 +2958,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lY9HpdakmiYjlWOfyB79QFzru1ewSFkxEw3UtMdWLx0="
+          "Value": "sha256-hCcay8bWheI59CG5rtfnBXtiT8NERYhR+GikzU9gNTk="
         }
       ]
     },
@@ -3236,6 +3257,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "img/image.9x0oyknxiu.jpg",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\image.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178951"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UwMoZLOA52K9qMmmFvTRloD6LOAyutqAKsZ6HrRY4bM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 14:28:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9x0oyknxiu"
+        },
+        {
+          "Name": "label",
+          "Value": "img/image.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UwMoZLOA52K9qMmmFvTRloD6LOAyutqAKsZ6HrRY4bM="
+        }
+      ]
+    },
+    {
+      "Route": "img/image.jpg",
+      "AssetFile": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\image.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178951"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UwMoZLOA52K9qMmmFvTRloD6LOAyutqAKsZ6HrRY4bM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 14:28:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UwMoZLOA52K9qMmmFvTRloD6LOAyutqAKsZ6HrRY4bM="
         }
       ]
     },
