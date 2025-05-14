@@ -1,0 +1,14 @@
+#accountbar {
+  width: 43px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+#topbar-sign {
+  color: #000000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
