@@ -9,8 +9,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\Group.png",
+      "PackagePath": "staticwebassets\\img\\Group.png"
+    },
+    {
       "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\image.jpg",
       "PackagePath": "staticwebassets\\img\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\profil.jpg",
+      "PackagePath": "staticwebassets\\img\\profil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\profil2.jpg",
+      "PackagePath": "staticwebassets\\img\\profil2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\profil3.jpg",
+      "PackagePath": "staticwebassets\\img\\profil3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\img\\resim.jpg",
+      "PackagePath": "staticwebassets\\img\\resim.jpg"
     },
     {
       "Id": "C:\\Users\\cozgu\\Documents\\Asp-Blog-Projesi\\BlogUygulaması\\wwwroot\\js\\site.js",

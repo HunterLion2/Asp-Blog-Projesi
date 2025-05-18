@@ -1,105 +1,66 @@
-/* Topbar Css Dosyaları */
+/* Topbar Tasarım */
 
-#accountbar {
-  width: 43px;
-  height: 45px;
-  flex-shrink: 0;
+#_topbar {
+    opacity: 0.89;
+    background-color: #FFF;
+    backdrop-filter: blur(5px);
 }
 
-#topbar-sign {
-  color: #000000;
-  margin-top: 10px;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+#top-link {
+    color: #000;
+    font-family: "Arial";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
 }
 
-.searchbutton {
-  border-radius: 16px;
-  border: 1px solid #000;
-  background: #D75E5E;
+#hello {
+    color: #000;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-#topbar-link {
-  text-decoration: none;
+#nice-word {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-#topbar-text {
-  width: 125px;
-  border-radius: 13px;
-  padding: 10px;
-  color: #000;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+/* Yazı Alanı */
+
+.word-main-head {
+    border-radius: 5px;
+    background: rgba(231, 231, 231, 0.8);
 }
 
-/* home */
-
-#home {
-  border: none;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 20px;
-  margin-right: 55px;
-  border-radius: 20px;
+.word-place {
+    border-radius: 14px;
+    border: 3px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#home-1 {
-  border: none;
-  padding-left: 15px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 20px;
-  padding: 20px;
-  width: 495px;
+.like-number {
+    color: #000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-family: Inconsolata;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-#sonyazılanlar {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-#home-img {
-  width: 110px;
-  height: 100px;
-  border-radius: 20%;
-}
-
-/* Bloglar */
-
-#card-head {
-  color: #000;
-  font-family: Italiana;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-#home-card-disagn {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: none;
-}
-
-#card-text {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 17px;
-  text-align: left;
-}
-
-
-/* Footer */
-
-#Name {
-  margin-left: 200px;
-}
-
-#imza {
-  margin-left: 360px;
-  width: 107.29px;
-  height: 56.996px;
+#date {
+    border-radius: 5px;
+    background: #000;
 }
