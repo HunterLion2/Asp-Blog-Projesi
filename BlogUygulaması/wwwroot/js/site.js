@@ -1,4 +1,11 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Yorum Bölümü
 
-// Write your JavaScript code.
+const yorum = document.querySelector(".yorumselection");
+
+function AnimasionAdd() {
+    yorum.classList.add("animate__fadeInUp");
+}
+
+yorum.addEventListener("click", AnimasionAdd);
+
+
