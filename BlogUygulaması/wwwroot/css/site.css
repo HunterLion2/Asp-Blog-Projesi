@@ -6,6 +6,12 @@
     backdrop-filter: blur(5px);
 }
 
+#_footer {
+    opacity: 0.89;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
 #top-link {
     color: #000;
     font-family: "Arial";
@@ -37,16 +43,15 @@
 
 /* Yazı Alanı */
 
-.word-main-head {
-    border-radius: 5px;
-    background: rgba(231, 231, 231, 0.8);
-}
-
 .word-place {
     border-radius: 14px;
     border: 3px solid #000;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#home-word {
+    background-color: rgba(224, 224, 224, 0.4);
 }
 
 .like-number {
@@ -60,7 +65,58 @@
     line-height: normal;
 }
 
+.word-main-paragraph {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #date {
     border-radius: 5px;
     background: #000;
+}
+
+/*Hakkımda Bölümü*/
+
+.admin-about-panel {
+    width: 1436px;
+    height: 810px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    margin-top: 100px;
+    border: 0px solid #000;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(28.25px);
+}
+
+.my-name {
+    color: #000;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.resimler {
+    width: 89px;
+    height: 89px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.my-learned {
+    color: #000;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.my-explain {
+    color: #000;
+    font-family: "Port Lligat Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
