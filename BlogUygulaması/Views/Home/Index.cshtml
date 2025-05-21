@@ -17,7 +17,7 @@
 
 <div id="home">
     <h1 class=" d-flex align-items-center justify-content-center text"
-        style="height: 80vh; font-size: 65px; color: rgba(201, 201, 201, 0.8); ">Hello</h1>
+        style="height: 80vh; font-size: 90px; color: rgba(201, 201, 201, 0.8); ">Hello</h1>
 </div>
 
 
@@ -43,25 +43,22 @@
     <div class="container">
         <h2>Son Yazılar</h2>
         <hr>
-        <div class="mt-2">
-            <a asp-controller="WordDetails" asp-action="Index" class="form-control link-underline link-underline-opacity-0 ">
-                <div class="row p-2 rounded" id="home-word">
-                    <div class="col-md-3">
-                        <img src="~/img/resim.jpg" alt="" width="75%" class="rounded">
-                    </div>
-                    <div class="col-md-7 p-3">
-                        <h1 class="word-main-head d-flex align-items-center">İntel Ve Amd Arasındaki Savaş</h1>
-                        <p class="word-main-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ut
-                            autem harum laborum eos in magni,
-                            eius, cum saepe minus accusamus quia tenetur temporibus nulla...</p>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-end">
-                        <p class="text-white p-2" id="date">18/05/2025</p>
-                    </div>
+        <div class="mt-2 container">
+            <div class="row p-2 rounded " id="home-word">
+                <div class="col-md-2">
+                    <img src="~/img/resim.jpg" alt="" width="100%" class="rounded">
                 </div>
-            </a>
-
-
+                <div class="col-md-8 p-3 d-flex align-items-center">
+                    <a asp-controller="WordDetails" asp-action="Index" class="link-underline link-underline-opacity-0">
+                        <h2 class="word-main-head d-flex align-items-center text-black">İntel Ve Amd Arasındaki Savaş</h2>
+                        <p class="word-main-paragraph text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ut
+                            autem harum laborum eos in magni,eius, cum saepe minus accusamus quia tenetur temporibus nulla...</p>
+                    </a>
+                </div>
+                <div class="col-md-1 d-flex align-items-end">
+                    <p class="text-white p-2" id="date">18/05/2025</p>
+                </div>
+            </div>
         </div>
 
     </div>

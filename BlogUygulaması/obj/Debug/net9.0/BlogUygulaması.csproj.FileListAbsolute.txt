@@ -86,4 +86,4 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\ref\B
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\BlogUygulaması.sourcelink.json
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\ax7zzwuvh8-442lan4n9w.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-iuzi9ugvwr.gz
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-00pwi0j71z.gz
