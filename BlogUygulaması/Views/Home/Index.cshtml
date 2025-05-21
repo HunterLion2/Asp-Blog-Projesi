@@ -44,7 +44,7 @@
         <h2>Son Yazılar</h2>
         <hr>
         <div class="mt-2 container">
-            <div class="row p-2 rounded " id="home-word">
+            <div class="row p-2 rounded animate__animated " id="home-word">
                 <div class="col-md-2">
                     <img src="~/img/resim.jpg" alt="" width="100%" class="rounded">
                 </div>
@@ -63,5 +63,22 @@
 
     </div>
 </div>
+
+<script>
+
+    const homeWord = document.getElementById('home-word');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                homeWord.classList.add('animate__fadeInDown');
+                obs.unobserve(entry.target); // Sadece bir kez çalışsın
+            }
+        });
+    }, { threshold: 0.4 });
+
+    observer.observe(homeWord);
+
+</script>
 
 <script src="~/js/site.js"></script>

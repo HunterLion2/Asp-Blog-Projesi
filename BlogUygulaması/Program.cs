@@ -1,7 +1,18 @@
+using BlogUygulaması.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseSqlite(connectionString);
+    // Buranın içerisindeki "DefaultConnection" değeri appsettings.json içerisinden gelir;
+});
+
 
 var app = builder.Build();
 
