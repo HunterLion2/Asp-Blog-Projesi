@@ -20,6 +20,7 @@ public class CreateWordController : Controller
             {
                 Id = model.Id,
                 Resim = model.Resim,
+                Konu = model.Konu,
                 AnaBaşlık = model.AnaBaşlık,
                 DateTime = model.DateTime,
                 Açıklama = model.Açıklama

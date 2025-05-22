@@ -39,25 +39,33 @@
         });
 </script>
 
+
+
+@model List<WordModel>
+
+
 <div class="mt-5">
     <div class="container">
         <h2>Son Yazılar</h2>
         <hr>
         <div class="mt-2 container">
             <div class="row p-2 rounded animate__animated " id="home-word">
-                <div class="col-md-2">
-                    <img src="~/img/resim.jpg" alt="" width="100%" class="rounded">
-                </div>
-                <div class="col-md-8 p-3 d-flex align-items-center">
-                    <a asp-controller="WordDetails" asp-action="Index" class="link-underline link-underline-opacity-0">
-                        <h2 class="word-main-head d-flex align-items-center text-black">İntel Ve Amd Arasındaki Savaş</h2>
-                        <p class="word-main-paragraph text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ut
-                            autem harum laborum eos in magni,eius, cum saepe minus accusamus quia tenetur temporibus nulla...</p>
-                    </a>
-                </div>
-                <div class="col-md-1 d-flex align-items-end">
-                    <p class="text-white p-2" id="date">18/05/2025</p>
-                </div>
+                @foreach (var yazılar in Model)
+                {
+                    <div class="col-md-2">
+                        <img src="~/img/@yazılar.Resim" alt="" width="100%" class="rounded">
+                    </div>
+                    <div class="col-md-8 p-3 d-flex align-items-center">
+                        <a asp-controller="WordDetails" asp-action="Index" class="link-underline link-underline-opacity-0">
+                            <h2 class="word-main-head d-flex align-items-center text-black">@yazılar.AnaBaşlık</h2>
+                            <p class="word-main-paragraph text-black">@yazılar.Açıklama</p>
+                        </a>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-end">
+                        <p class="text-white p-2" id="date">@yazılar.DateTime</p>
+                    </div>
+                }
+
             </div>
         </div>
 
