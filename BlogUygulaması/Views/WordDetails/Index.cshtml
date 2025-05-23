@@ -1,57 +1,20 @@
-<div class="container mt-0">
+@model WordModel
+
+<div class="container mt-0" >
     <div id="home-word">
         <div class="row p-4 rounded ">
             <div class="col-md-4">
-                <img src="~/img/resim.jpg" alt="" width="100%" class="rounded">
+                <img src="~/img/@Model.Resim" alt="" width="100%" class="rounded">
             </div>
             <div class="col-md-8">
-                <h1 class="word-main-head text-black">İntel Ve Amd Arasındaki Savaş</h1>
+                <h1 class="word-main-head text-black">@Model.AnaBaşlık</h1>
                 <p class="word-main-paragraph text-black">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit officia amet enim sunt
-                    nesciunt qui rerum ut reprehenderit distinctio ex ipsa illo quas similique, nisi, voluptas et
-                    suscipit necessitatibus facilis voluptatum iure. Harum sapiente nostrum assumenda quidem? Debitis,
-                    in explicabo sunt quaerat eius porro quidem at, cumque blanditiis repudiandae omnis accusantium
-                    fugiat soluta veritatis deleniti! Ullam at, quidem ex aliquid nobis explicabo ut quae nulla ea
-                    numquam dignissimos fugit similique facere repellendus. Excepturi nesciunt officia nobis voluptatum
-                    debitis vitae adipisci, cum molestiae doloremque assumenda eos blanditiis dolor illum tempore ipsum
-                    magni harum hic sint qui, dolorem corporis! Similique ducimus architecto fuga harum eaque, deserunt
-                    adipisci repudiandae aut iste voluptatibus provident obcaecati itaque libero? Pariatur, molestiae
-                    animi ex molestias porro sit fugit maxime voluptatum distinctio doloremque aut beatae ratione
-                    blanditiis in laborum. Perferendis sequi esse blanditiis molestias non reprehenderit nam, ducimus
-                    optio adipisci ipsa corporis ad, nobis, aspernatur exercitationem. Fugiat quasi, ipsa enim esse
-                    quibusdam accusantium qui dignissimos id nesciunt. Enim, eveniet at sunt magnam dignissimos
-                    deleniti? Itaque quis, quod reprehenderit sapiente nostrum ab, quia obcaecati ratione et laboriosam
-                    dicta soluta maxime repudiandae illum aspernatur. Qui est minima voluptas reiciendis necessitatibus
-                    cum ullam dolor, reprehenderit deserunt beatae quo velit dignissimos veniam provident eius
-                    voluptatum quis laborum rerum alias tempore ratione? Itaque commodi impedit fugit sed exercitationem
-                    doloribus ratione necessitatibus error, quibusdam accusamus pariatur omnis porro corporis veritatis
-                    nesciunt inventore accusantium ducimus atque aperiam laborum, neque, nulla saepe? Minima consectetur
-                    omnis, eveniet illum asperiores nesciunt tempora sit consequatur distinctio iste nobis, facilis
-                    debitis aspernatur doloribus tenetur commodi repudiandae assumenda sunt beatae id cupiditate ad amet
-                    perferendis? Expedita perspiciatis minima dolorem deserunt optio officiis et sint blanditiis aliquid
-                    voluptatem quis culpa eum libero accusamus necessitatibus ipsam obcaecati nisi at quos, voluptas
-                    laudantium exercitationem fuga eveniet. Ab quibusdam, laborum, similique voluptatem quaerat minima
-                    iure odit, libero impedit totam dolor praesentium. Tenetur a veniam nemo aperiam id, cupiditate
-                    libero eveniet consequuntur ipsa aliquam pariatur culpa iusto? Distinctio qui deleniti beatae nulla
-                    laborum cupiditate exercitationem odit, labore quaerat adipisci illum provident mollitia vitae
-                    pariatur fugit amet laboriosam et facere voluptatem molestiae quia aspernatur delectus quisquam
-                    doloremque! Atque numquam laudantium dolore nisi nulla nostrum quibusdam. Rerum possimus officiis
-                    fugit ipsam a ipsa consectetur repellat mollitia voluptas necessitatibus ratione accusamus odio
-                    harum dolor eligendi dolorem consequuntur eius laboriosam sunt assumenda, et omnis quibusdam. Ipsa
-                    repellendus voluptate vel blanditiis reiciendis eius, nesciunt expedita quae similique enim
-                    accusamus tenetur qui quam et asperiores! Officiis consectetur corrupti numquam doloremque molestias
-                    nisi tempora distinctio rerum sapiente, odio possimus impedit cum sequi sunt repudiandae eius ex
-                    aspernatur in sit saepe sint nulla, blanditiis a ipsum! Hic ratione eum quaerat aperiam. Modi
-                    quibusdam sed earum eum totam quam perferendis, harum nihil commodi error repellendus debitis
-                    distinctio quae ipsa eaque velit inventore? Voluptatum accusamus impedit voluptas, recusandae veniam
-                    ex, adipisci quidem nisi suscipit, eum culpa nesciunt nemo? Perferendis quo, tenetur rerum obcaecati
-                    error doloremque consectetur dolores voluptatem accusamus laboriosam impedit ratione facilis maxime
-                    pariatur in et blanditiis? Vero enim nihil iure provident non eligendi.
+                    @Model.Açıklama
                 </p>
             </div>
         </div>
         <div class="d-flex align-items-end justify-content-end">
-            <p class="text-white p-2" id="date">18/05/2025</p>
+            <p class="text-white p-2" id="date">@Model.DateTime.ToShortDateString()</p>
         </div>
     </div>
 
