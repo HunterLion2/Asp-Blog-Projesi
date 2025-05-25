@@ -1,4 +1,11 @@
 /* Topbar Tasarım */
+body {
+    cursor: url('/img/point.svg'), auto;
+}
+
+a, a:visited {
+    cursor: url('/img/googleclick.svg'), pointer;
+}
 
 #_topbar {
     opacity: 0.89;

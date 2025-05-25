@@ -17,7 +17,7 @@
 
 <div id="home">
     <h1 class=" d-flex align-items-center justify-content-center text"
-        style="height: 80vh; font-size: 90px; color: rgba(201, 201, 201, 0.8); ">Hello</h1>
+        style="height: 80vh; font-size: 90px; color: rgba(240, 240, 240, 0.8); ">Hello</h1>
 </div>
 
 
@@ -43,7 +43,6 @@
 
 @model List<WordModel>
 
-
 <div class="mt-5">
     <div class="container">
         <h2>Son Yazılar</h2>
@@ -52,23 +51,21 @@
             <div class="row p-2 rounded animate__animated " id="home-word">
                 @foreach (var yazılar in Model)
                 {
-                    <div class="col-md-2">
-                        <img src="~/img/@yazılar.Resim" alt="" width="100%" class="rounded">
+                    <div class="col-md-2 mt-3">
+                        <img src="~/img/@yazılar.ResimDosyaAdi" alt="" width="100%" class="rounded">
                     </div>
-                    <div class="col-md-8 d-flex align-items-center">
+                    <div class="col-md-8 mt-3">
                         <a asp-controller="WordDetails" asp-action="Index" asp-route-id="@yazılar.Id" class="link-underline link-underline-opacity-0">
-                            <h2 class="word-main-head d-flex align-items-center text-black">@yazılar.AnaBaşlık</h2>
-                            <p class="word-main-paragraph text-black">@yazılar.Açıklama</p>
+                            <h2 class="word-main-head text-black">@yazılar.AnaBaşlık</h2>
+                            <p class="word-main-paragraph text-black">@(@yazılar.Açıklama.Length > 150 ? yazılar.Açıklama.Substring(0, 150) + "..." : yazılar.Açıklama)</p>
                         </a>
                     </div>
                     <div class="col-md-1 d-flex align-items-end">
                         <p class="text-white p-2" id="date">@yazılar.DateTime.ToShortDateString()</p>
                     </div>
                 }
-
             </div>
         </div>
-
     </div>
 </div>
 
