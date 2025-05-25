@@ -209,8 +209,4 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\runti
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\w4spkeq2mh-idxfdoqyz1.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-lm1tgsbjfp.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\2pfyx6xv3n-1kz3elmejl.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\rjh7comvm9-z0dg3cpqbs.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\3oljf0b5o0-87qapempev.gz
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-0cakg57zr8.gz
