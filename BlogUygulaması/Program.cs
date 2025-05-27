@@ -1,4 +1,5 @@
 using BlogUygulaması.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(connectionString);
     // Buranın içerisindeki "DefaultConnection" değeri appsettings.json içerisinden gelir;
 });
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();;
 
 
 var app = builder.Build();
