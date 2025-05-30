@@ -214,3 +214,9 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compr
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\anfah3i67e-qlccset4i1.gz
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\s15kgl69fn-xzw0cte36n.gz
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\i20bb6nes0-jfsiqqwiad.gz
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\jgjkzpq6su-5ipweew5fc.gz

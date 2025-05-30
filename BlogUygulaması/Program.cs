@@ -11,10 +11,11 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseSqlite(connectionString);
-    // Buranın içerisindeki "DefaultConnection" değeri appsettings.json içerisinden gelir;
 });
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();;
+builder.Services.AddIdentity<AppUser, AppRole>()
+    .AddEntityFrameworkStores<DataContext>()
+    .AddDefaultTokenProviders();
 
 
 var app = builder.Build();
@@ -28,16 +29,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
