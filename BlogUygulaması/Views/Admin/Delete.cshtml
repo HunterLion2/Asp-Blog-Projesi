@@ -2,9 +2,9 @@
 
 <div class="container bg-dark rounded text-center w-25">
     <div class="mt-4 p-2 align-self-center">
-        <a asp-controller="Home" asp-action="Index" class="d-flex align-items-start"><i class="fa-solid fa-circle-xmark text-white"></i></a>
+        <a asp-controller="Admin" asp-action="Index" class="d-flex align-items-start"><i class="fa-solid fa-circle-xmark text-white"></i></a>
         <h2 class="text-white">@Model.AnaBaşlık</h2>
-        <form asp-controller="CreateWord" asp-action="DeleteConfirm" method="post">
+        <form asp-controller="Admin" asp-action="DeleteConfirm" method="post">
             <input type="hidden" name="id" value="@Model.Id">
             <p class="text-white">Bu Bloğu Silmek İstediğinden Eminmisin ?</p>
             <button class="btn btn-outline-light" type="submit">Sil</button>

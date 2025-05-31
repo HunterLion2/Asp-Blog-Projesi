@@ -28,5 +28,9 @@ public class WordModel
     [Display(Name = "Açıklama")]
     public string Açıklama { get; set; } = null!;
 
+    [Required]
+    [Display(Name = "MiniAciklama")]
+    public string MiniAciklama { get; set; } = null!;
+
 }
 

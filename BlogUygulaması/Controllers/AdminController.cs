@@ -47,13 +47,14 @@ public class Admin : Controller
                 AnaBaşlık = model.AnaBaşlık,
                 DateTime = model.DateTime,
                 Açıklama = model.Açıklama,
+                MiniAciklama = model.MiniAciklama,
                 ResimDosyaAdi = fileName
             };
 
             _dataContext.WordModels.Add(word);
             _dataContext.SaveChanges();
 
-            return RedirectToAction("Admin", "Index");
+            return RedirectToAction("Index", "Admin");
         }
 
         ViewBag.Kategoriler = new SelectList(_dataContext.WordModels.ToList(), "Konu");
@@ -87,7 +88,7 @@ public class Admin : Controller
             TempData["Message"] = $"{entity.AnaBaşlık} Bloğu Silindi";
         }
 
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Index","Admin");
     }
 
 }

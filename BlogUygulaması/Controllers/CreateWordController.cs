@@ -81,7 +81,7 @@ public class CreateWordController : Controller
             TempData["Message"] = $"{entity.AnaBaşlık} Bloğu Silindi";
         }
 
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Index","Admın");
     }
 
 }
