@@ -32,10 +32,8 @@
                                 <th scope="row" class="p-3 text-center">@result.AnaBaşlık</th>
                                 <th scope="row" class="p-3 text-center">@result.DateTime</th>
                                 <th scope="row" class="p-3 text-center">@result.Konu</th>
-                                <th class="text-center"><a href="" class="btn btn-light"> <i
-                                            class="fa-solid fa-sliders"></i></a></th>
-                                <th class="text-center"><a asp-controller="Admin" asp-action="Delete" asp-route-id="@result.Id"
-                                        class="btn btn-danger"><i class="fa-solid fa-eraser"></i></a></th>
+                                <th class="text-center"><a asp-controller="Admin" asp-action="Design" asp-route-id="@result.Id" class="btn btn-light"> <i class="fa-solid fa-sliders"></i></a></th>
+                                <th class="text-center"><a asp-controller="Admin" asp-action="Delete" asp-route-id="@result.Id" class="btn btn-danger"><i class="fa-solid fa-eraser"></i></a></th>
                             </tr>
                         }
                     }

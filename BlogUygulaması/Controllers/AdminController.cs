@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using BlogUygulaması.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -35,7 +36,7 @@ public class Admin : Controller
             string fileName = null;
             if (model.Resim != null && model.Resim.Length > 0)
             {
-                var extension = Path.GetExtension(model.Resim.FileName); 
+                var extension = Path.GetExtension(model.Resim.FileName);
                 fileName = Path.GetRandomFileName() + extension;
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
 
@@ -92,6 +93,51 @@ public class Admin : Controller
             TempData["Message"] = $"{entity.AnaBaşlık} Bloğu Silindi";
         }
 
+        return RedirectToAction("Index", "Admin");
+    }
+
+    public async Task<ActionResult> Design(int id)
+    {
+        var result = await _dataContext.WordModels.Where(i => i.Id == id).FirstOrDefaultAsync();
+        return View(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> DesignConfirm(int? id, WordModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _dataContext.WordModels.Where(i => i.Id == id).FirstOrDefaultAsync();
+            if (result == null)
+            {
+                TempData["Message"] = "Güncellenecek blog bulunamadı!";
+                return RedirectToAction("Index", "Admin");
+            }
+
+            string fileName = result.ResimDosyaAdi;
+            if (model.Resim != null && model.Resim.Length > 0)
+            {
+                var extension = Path.GetExtension(model.Resim.FileName);
+                fileName = Path.GetRandomFileName() + extension;
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.Resim.CopyToAsync(stream);
+                }
+            }
+
+            result.Konu = model.Konu;
+            result.AnaBaşlık = model.AnaBaşlık;
+            result.DateTime = model.DateTime;
+            result.Açıklama = model.Açıklama;
+            result.MiniAciklama = model.MiniAciklama;
+            result.ResimDosyaAdi = fileName;
+
+            await _dataContext.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Admin");
+        }
         return RedirectToAction("Index", "Admin");
     }
 
