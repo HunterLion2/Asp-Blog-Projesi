@@ -32,17 +32,21 @@ public class Admin : Controller
     {
         if (ModelState.IsValid)
         {
-            var fileName = Path.GetRandomFileName() + "jpg";
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
-
-            using (var stream = new FileStream(path, FileMode.Create))
+            string fileName = null;
+            if (model.Resim != null && model.Resim.Length > 0)
             {
-                await model.Resim!.CopyToAsync(stream);
+                var extension = Path.GetExtension(model.Resim.FileName); 
+                fileName = Path.GetRandomFileName() + extension;
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.Resim.CopyToAsync(stream);
+                }
             }
 
             var word = new WordModel()
             {
-                Id = model.Id,
                 Konu = model.Konu,
                 AnaBaşlık = model.AnaBaşlık,
                 DateTime = model.DateTime,
@@ -88,7 +92,7 @@ public class Admin : Controller
             TempData["Message"] = $"{entity.AnaBaşlık} Bloğu Silindi";
         }
 
-        return RedirectToAction("Index","Admin");
+        return RedirectToAction("Index", "Admin");
     }
 
 }
