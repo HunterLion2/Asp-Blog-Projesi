@@ -42,6 +42,9 @@
 
 <body>
     <div id="liner">
+        <header>
+            @await Html.PartialAsync("Partials/Admin/_Topbar")
+        </header>
         <main role="main" style="width: 100%;">
             @RenderBody()
         </main>

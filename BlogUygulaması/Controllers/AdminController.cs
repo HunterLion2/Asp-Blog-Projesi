@@ -115,6 +115,7 @@ public class Admin : Controller
             }
 
             string fileName = result.ResimDosyaAdi;
+            
             if (model.Resim != null && model.Resim.Length > 0)
             {
                 var extension = Path.GetExtension(model.Resim.FileName);
