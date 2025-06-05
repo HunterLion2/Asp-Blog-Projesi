@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BlogUygulaması</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+DK+Loopet:wght@100..400&display=swap"
+        rel="stylesheet">
+    <style>
+        .right-bottom {
+            position: absolute;
+            left: 1463px;
+            top: 641px;
+        }
+
+        .x {
+            transition: transform 1s linear;
+            animation: spin 10s linear infinite;
+            transform-origin: 50% 50%;
+        }
+
+        @@keyframes spin {
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="liner">
+
+        <main role="main" style="width: 100%;">
+            <div style="position: absolute;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="457" height="312" viewBox="0 0 457 312" fill="none">
+                    <path d="M0 310L453 0H0V310Z" fill="black" stroke="black" stroke-width="2" />
+                </svg>
+            </div>
+            @RenderBody()
+            <div class="right-bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="457" height="310" viewBox="0 0 457 310" fill="none">
+                    <g filter="url(#filter0_d_81_28)">
+                        <path d="M457 0L4 310H457V0Z" fill="black" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_81_28" x="0" y="0" width="461" height="318" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_28" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_28" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </main>
+
+
+
+        <svg class="x" style="position: absolute; left: 350px; top: 150px;" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 1050px; top: 50px;" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 850px; top: 450px;" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 450px; bottom: 250px;" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 50px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+            viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 1550px;" xmlns="http://www.w3.org/2000/svg" width="30"
+            height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+        <svg class="x" style="position: absolute; left: 1450px; bottom: 200px;" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M1 12.8832L28.9701 17.0869M17.0869 1.00001L12.8832 28.9702" stroke="black" stroke-width="2" />
+        </svg>
+
+
+
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
