@@ -220,3 +220,5 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Micro
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\jgjkzpq6su-5ipweew5fc.gz
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\v97ztkq9ay-4x377iwent.gz
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\xzwuhb49wo-24moji8t47.gz

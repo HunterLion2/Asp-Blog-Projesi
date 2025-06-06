@@ -14,4 +14,9 @@ public class Login : Controller
         return View();
     }
 
+    public ActionResult Signin()
+    {
+        return View();
+    }
+
 }
