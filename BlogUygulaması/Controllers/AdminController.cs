@@ -1,19 +1,22 @@
 using System.Threading.Tasks;
 using BlogUygulaması.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace Admin.Controllers;
+namespace BlogUygulaması.Controllers;
 
-public class Admin : Controller
+public class AdminController : Controller
 {
 
     private readonly DataContext _dataContext;
+    private readonly UserManager<AppUser> _userManager;
 
-    public Admin(DataContext dataContext)
+    public AdminController(DataContext dataContext, UserManager<AppUser> userManager)
     {
         _dataContext = dataContext;
+        _userManager = userManager;
     }
 
     public ActionResult Index()
@@ -144,7 +147,10 @@ public class Admin : Controller
 
     public ActionResult UserManagement()
     {
-        return View();
+
+        var result = _userManager.Users.ToList();
+
+        return View(result);
     }
 
 }

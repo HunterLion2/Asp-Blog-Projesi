@@ -1,17 +1,35 @@
+@model List<AppUser>
+
 @{
     Layout = "_AdminLayout";
 }
 
+<div class="container mt-5">
+    <a asp-controller="Admin" asp-action="Index" class="btn btn-dark"><i class="fa-solid fa-arrow-left fs-5"></i></a>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="d-flex align-items-center">
+    <div class="container mt-5">
+        <div class="admin-selection">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center fs-5">Id</th>
+                        <th scope="col" class="text-center fs-5">Email</th>
+                        <th scope="col" class="text-center fs-5">KullanıcıAdı</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    @foreach (var result in Model)
+                    {
+                        <tr>
+                            <th scope="row" class="p-3 text-center">@result.Id</th>
+                            <th scope="row" class="p-3 text-center">@result.UserName</th>
+                            <th scope="row" class="p-3 text-center">@result.AdSoyad</th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
