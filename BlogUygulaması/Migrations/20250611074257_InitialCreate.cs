@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BlogUygulaması.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateModels : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,10 +34,12 @@ namespace BlogUygulaması.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: false),
                     AdSoyad = table.Column<string>(type: "TEXT", nullable: false),
+                    Password = table.Column<string>(type: "TEXT", nullable: false),
+                    ConfirmPassword = table.Column<string>(type: "TEXT", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     EmailConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
                     PasswordHash = table.Column<string>(type: "TEXT", nullable: true),
@@ -51,6 +55,37 @@ namespace BlogUygulaması.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KonularModel",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Konu = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KonularModel", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WordModels",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ResimDosyaAdi = table.Column<string>(type: "TEXT", nullable: true),
+                    Konu = table.Column<string>(type: "TEXT", nullable: false),
+                    DateTime = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    AnaBaşlık = table.Column<string>(type: "TEXT", nullable: false),
+                    Açıklama = table.Column<string>(type: "TEXT", nullable: false),
+                    MiniAciklama = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WordModels", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -159,6 +194,27 @@ namespace BlogUygulaması.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "KonularModel",
+                columns: new[] { "Id", "Konu" },
+                values: new object[,]
+                {
+                    { 1, "Finans" },
+                    { 2, "Doğa" },
+                    { 3, "Güncel" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "WordModels",
+                columns: new[] { "Id", "AnaBaşlık", "Açıklama", "DateTime", "Konu", "MiniAciklama", "ResimDosyaAdi" },
+                values: new object[,]
+                {
+                    { 1, "Dolar Ve Euro Arasındaki Kapışma", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Finans", "Kısa açıklama burada", "resim.jpg" },
+                    { 2, "Doğanın Sorunları", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Doğa", "Kısa açıklama burada", "image.jpg" },
+                    { 3, "İntel Ve Amd Arasındaki Savaş", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Finans", "Kısa açıklama burada", "resim.jpg" },
+                    { 4, "Trafik Cezalarındaki Artış", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Güncel", "Kısa açıklama burada", "resim.jpg" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -214,6 +270,12 @@ namespace BlogUygulaması.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "KonularModel");
+
+            migrationBuilder.DropTable(
+                name: "WordModels");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
