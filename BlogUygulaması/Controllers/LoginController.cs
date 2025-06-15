@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using BlogUygulaması.Models;
+using dotnet_store.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -22,6 +23,12 @@ public class LoginController : Controller
     {
         return View();
     }
+
+    // [HttpPost]
+    // public ActionResult Index(AccountLoginModel model, )
+    // {
+    //     return View();
+    // }
 
     public ActionResult Signin()
     {

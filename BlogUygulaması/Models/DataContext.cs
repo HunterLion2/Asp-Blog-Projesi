@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogUygulaması.Models;
 
 
-public class DataContext : IdentityDbContext<AppUser, AppRole,int>
+public class DataContext : IdentityDbContext<AppUser, AppRole, int>
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {
@@ -13,7 +13,7 @@ public class DataContext : IdentityDbContext<AppUser, AppRole,int>
     }
 
     public DbSet<WordModel> WordModels { get; set; }
-
+    public DbSet<KonularModel> KonularModel { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -75,12 +75,57 @@ public class DataContext : IdentityDbContext<AppUser, AppRole,int>
 
                 new KonularModel {
                     Id = 2,
-                    Konu = "Doğa"
+                    Konu = "Yazılım / Programlama"
                 },
 
                 new KonularModel {
                     Id = 3,
-                    Konu = "Güncel"
+                    Konu = "Kişisel Gelişim"
+                },
+
+                new KonularModel {
+                    Id = 4,
+                    Konu = "Günlük Yaşam"
+                },
+                new KonularModel {
+                    Id = 5,
+                    Konu = "Eğitim"
+                },
+                new KonularModel {
+                    Id = 6,
+                    Konu = "Seyahat"
+                },
+                new KonularModel {
+                    Id = 7,
+                    Konu = "Sağlık & Fitness"
+                },
+                new KonularModel {
+                    Id = 8,
+                    Konu = "Kitap / Film / Dizi İncelemeleri"
+                },
+                new KonularModel {
+                    Id = 9,
+                    Konu = "Girişimcilik"
+                },
+                new KonularModel {
+                    Id = 10,
+                    Konu = "Bilim"
+                },
+                new KonularModel {
+                    Id = 11,
+                    Konu = "Fotoğrafçılık"
+                },
+                new KonularModel {
+                    Id = 12,
+                    Konu = "Finans / Ekonomi"
+                },
+                new KonularModel {
+                    Id = 13,
+                    Konu = "Moda & Stil"
+                },
+                new KonularModel {
+                    Id = 14,
+                    Konu = "Yemek Tarifleri"
                 },
             }
         );

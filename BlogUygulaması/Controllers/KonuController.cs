@@ -13,7 +13,7 @@ public class KonuController : Controller
 
     public ActionResult Index()
     {
-        var yazilar = _context.WordModels.ToList();
+        var yazilar = _context.KonularModel.ToList();
         return View(yazilar);
     }
 }

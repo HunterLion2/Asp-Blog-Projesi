@@ -3,6 +3,7 @@ using System;
 using BlogUygulaması.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogUygulaması.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250615130517_UpdateWordModel")]
+    partial class UpdateWordModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.5");
@@ -136,67 +139,12 @@ namespace BlogUygulaması.Migrations
                         new
                         {
                             Id = 2,
-                            Konu = "Yazılım / Programlama"
+                            Konu = "Doğa"
                         },
                         new
                         {
                             Id = 3,
-                            Konu = "Kişisel Gelişim"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Konu = "Günlük Yaşam"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Konu = "Eğitim"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Konu = "Seyahat"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Konu = "Sağlık & Fitness"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Konu = "Kitap / Film / Dizi İncelemeleri"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Konu = "Girişimcilik"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Konu = "Bilim"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Konu = "Fotoğrafçılık"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Konu = "Finans / Ekonomi"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Konu = "Moda & Stil"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Konu = "Yemek Tarifleri"
+                            Konu = "Güncel"
                         });
                 });
 

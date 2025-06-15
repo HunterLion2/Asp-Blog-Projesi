@@ -1,4 +1,4 @@
-@model WordModel
+@model BlogCreateViewModel
 
 @{
     Layout = "_AdminLayout";
@@ -26,28 +26,28 @@
         <div class="border rounded bg-light p-3">
             <form asp-controller="Admin" asp-action="Create" method="post" enctype="multipart/form-data">
                 <div class="row">
+                    <div asp-validation-summary="All"></div>
                     <div class="col-md-4 mt-2">
-                        <input asp-for="AnaBaşlık" class="form-control" placeholder="Başlık">
-                        <span asp-validation-for="AnaBaşlık" class="text-danger"></span>
+                        <input asp-for="@Model.Word.AnaBaşlık" class="form-control" placeholder="Başlık">
+                        <span asp-validation-for="@Model.Word.AnaBaşlık" class="text-danger"></span>
 
-                        <input asp-for="DateTime" class="form-control mt-2">
+                        <input asp-for="@Model.Word.DateTime" class="form-control mt-2">
 
-                        <span asp-validation-for="MiniAciklama" class="text-danger"></span>
-                        <textarea asp-for="MiniAciklama" class="form-control mt-2" rows="5" placeholder="Mini Açıklama Giriniz" id=""></textarea>
+                        <span asp-validation-for="@Model.Word.MiniAciklama" class="text-danger"></span>
+                        <textarea asp-for="@Model.Word.MiniAciklama" class="form-control mt-2" rows="5" placeholder="Mini Açıklama Giriniz" id=""></textarea>
 
-                        <input asp-for="Resim" class="form-control mt-2">
+                        <input asp-for="@Model.Word.Resim" class="form-control mt-2">
 
-                        <select asp-for="Konu" class="form-control mt-2">
+                        <select asp-for="@Model.Word.Konu" class="form-control mt-2">
                             <option value="">Kategori Seçiniz</option>
-                            <option value="teknoloji">Teknoloji</option>
-                            <option value="günlük">Günlük</option>
-                            <option value="kişisel">Kişisel</option>
-                            <option value="diğer">Diğer</option>
+                            @foreach(var result in Model.KonularList) {
+                                <option value="">@result.Konu</option>
+                            }
                         </select>
-                        <span asp-validation-for="Konu" class="text-danger"></span>
+                        <span asp-validation-for="@Model.Word.Konu" class="text-danger"></span>
                     </div>
                     <div class="col-md-8 mt-2">
-                        <textarea asp-for="Açıklama" id="maintext" class="form-control" rows="30"
+                        <textarea asp-for="@Model.Word.Açıklama" id="maintext" class="form-control" rows="30"
                             placeholder="Yazınızı buraya girin..."></textarea>
                     </div>
                 </div>
@@ -65,21 +65,8 @@
 
 <script>
   tinymce.init({
-    selector: '#maintext',
-    plugins: [
-      // Core editing features
-      'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
-      // Your account includes a free trial of TinyMCE premium features
-      // Try the most popular premium features until Jun 14, 2025:
-      'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown','importword', 'exportword', 'exportpdf'
-    ],
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-    tinycomments_mode: 'embedded',
-    tinycomments_author: 'Author name',
-    mergetags_list: [
-      { value: 'First.Name', title: 'First Name' },
-      { value: 'Email', title: 'Email' },
-    ],
-    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
   });
 </script>

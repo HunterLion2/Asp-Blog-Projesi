@@ -28,11 +28,16 @@ public class AdminController : Controller
 
     public ActionResult Create()
     {
-        return View();
+        var viewModel = new BlogCreateViewModel
+        {
+            Word = new WordModel(),
+            KonularList = _dataContext.KonularModel.ToList()
+        };
+        return View(viewModel);
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateAsync(WordModel model)
+    public async Task<ActionResult> Create(WordModel model)
     {
         if (ModelState.IsValid)
         {
@@ -64,8 +69,6 @@ public class AdminController : Controller
 
             return RedirectToAction("Index", "Admin");
         }
-
-        ViewBag.Kategoriler = new SelectList(_dataContext.WordModels.ToList(), "Konu");
         return View(model);
     }
 
