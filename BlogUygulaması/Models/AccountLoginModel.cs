@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace dotnet_store.Models;
+namespace BlogUygulaması.Models;
 
 public class AccountLoginModel {
 

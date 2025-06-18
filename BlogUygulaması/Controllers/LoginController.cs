@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using BlogUygulaması.Models;
-using dotnet_store.Models;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,10 +13,13 @@ public class LoginController : Controller
     private readonly DataContext _context;
     private readonly UserManager<AppUser> _userManager;
 
-    public LoginController(DataContext context, UserManager<AppUser> userManager)
+    private SignInManager<AppUser> _signInManager;
+
+    public LoginController(DataContext context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
     {
         _context = context;
         _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     public ActionResult Index()
@@ -24,11 +27,45 @@ public class LoginController : Controller
         return View();
     }
 
-    // [HttpPost]
-    // public ActionResult Index(AccountLoginModel model, )
-    // {
-    //     return View();
-    // }
+    [HttpPost]
+    public async Task<ActionResult> Index(AccountLoginModel model, string? returnUrl)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user != null)
+            {
+                await _signInManager.SignOutAsync();
+
+                var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.BeniHatirla, true);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+
+                else if (result.IsLockedOut)
+                {
+                    // GetLockoutEndDateAsync(user) bilgisi kullanıcının giriş için ne kadar sonra hesabının kitlendiği bilgisini bize söyler
+                    var locoutDate = await _userManager.GetLockoutEndDateAsync(user);
+                    var timeLeft = locoutDate.Value - DateTime.UtcNow;
+
+                    ModelState.AddModelError("", $"Hesabınız Kitlenmiştir.Lütfen {timeLeft.Minutes + 1} dakika sonra tekrar deneyiniz.");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Böyle Bir Hesap Bulunmamaktadır");
+            }
+        }
+        else
+        {
+
+        }
+        return View(model);
+    }
+
 
     public ActionResult Signin()
     {
