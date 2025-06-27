@@ -1,19 +1,36 @@
-<div id="_topbar">
-    <div class="topbar-head">
-        <div class="text-center p-4 d-flex justify-content-center" style="margin: 0px;">
-            <div class="p-3 px-5"> 
-                <p id="head-top"><a asp-controller="Home" asp-action="Index" id="top-link">Anasayfa</a></p>
-            </div>
-            <div class="p-3 px-5">
-                <p id="head-top"><a asp-controller="About" asp-action="Index" id="top-link">Hakkımda</a></p>
-            </div>
-            <div class="p-3 px-5">
-                <p id="head-top"><a asp-controller="Konu" asp-action="Index" id="top-link">Konular</a></p>
-            </div>
-            <div class="p-3 px-3">
-                <a asp-controller="Login" asp-action="Index" id="top-link"><i class="fa-solid fa-circle-user fs-3"></i></a>
-            </div>
+<head>
+    <link rel="stylesheet" href="~/Scss/searchbutton.css">
+</head>
+
+<nav class="navbar navbar-expand-lg " id="_topbar">
+    <div class="container-fluid w-100">
+        <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-center w-100 p-5">
+                <li class="nav-item px-4">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index" id="top-link">Anasayfa</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link" asp-controller="About" asp-action="Index" id="top-link">Hakkımda</a>
+                </li>
+                <li class="nav-item px-4">
+                    <a class="nav-link" asp-controller="Konu" asp-action="Index" id="top-link">Konular</a>
+                </li>
+                <li class="nav-item px-4">
+                    <form class="search-box" role="search">
+                        <input type="text" placeholder="" />
+                        <button type="reset"></button>
+                    </form>
+                </li>
+                <li class="nav-item px-4">
+                    <a asp-controller="Login" asp-action="Index" id="top-link"><i
+                            class="fa-solid fa-circle-user fs-3"></i></a>
+                </li>
+            </ul>
         </div>
-        
     </div>
-</div>
+</nav>
+

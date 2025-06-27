@@ -3,8 +3,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fff;
+            background-image:
+                radial-gradient(rgb(0, 0, 0, 0.3) 2px, transparent 2px);
+            background-size: 90px 90px;
+        }
+
+        #liner {
+            margin: 0;
+            height: 120vh;
+            width: 100%;
+            /* Tam ekran yüksekliği */
+            /* Taşmayı engelle */
+            background:
+                /* Sol üstten sağ alta çapraz çizgiler */
+                linear-gradient(45deg,
+                    transparent 49%,
+                    rgb(0, 0, 0) 49%,
+                    transparent 51%),
+
+                /* Sağ üstten sol alta çapraz çizgiler */
+                linear-gradient(-45deg,
+                    transparent 49%,
+                    rgb(0, 0, 0) 49%,
+                    transparent 51%);
+            background-size: 100%;
+        }
+    </style>
 </head>
 
+    <script>
+        // Scroll olayını dinle
+        window.addEventListener("scroll", function () {
+            // Scroll pozisyonunu al
+            const scrollPosition = window.scrollY;
+            // Toplam sayfa yüksekliğini al
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            // Scroll yüzdesini hesapla (0 ile 1 arasında)
+            const scrollFraction = Math.min(scrollPosition / totalHeight, 1);
+
+            // Açıyı 45 dereceden 90 dereceye lineer olarak değiştir
+            const angle = 45 + (scrollFraction * 45); // 45 -> 90
+            const oppositeAngle = -45 - (scrollFraction * 45); // -45 -> -90
+
+            @* const one = 0 + (scrollFraction * 255);
+            const two = 0 + (scrollFraction * 255);
+            const three = 0 + (scrollFraction * 255); *@
+
+                let color;
+
+            if (scrollFraction < 0.8) {
+                const hue = scrollFraction / 0.8 * 360; // 0-360
+                color = `hsl(${hue}, 80%, 40%)`;
+            } else {
+                // Son %20'de beyaza yaklaş
+                const whiteness = ((scrollFraction - 0.8) / 0.2) * 100; // 0-100
+                color = `hsl(0, 0%, ${50 + whiteness / 2}%)`; // 50%->100%
+            }
+
+            // liner div'ini al
+            const liner = document.getElementById("liner");
+            // Yeni gradient açısını uygula
+
+            if (scrollFraction === 0) {
+                liner.style.background = `
+                linear-gradient(${angle}deg, transparent 49%, rgb(0, 0, 0) 49%, transparent 51%),
+                linear-gradient(${oppositeAngle}deg, transparent 49%, rgb(0, 0, 0) 49%, transparent 51%)
+                `;
+            } else {
+                liner.style.background = `
+                linear-gradient(${angle}deg, transparent 49%, ${color} 49%, transparent 51%),
+                linear-gradient(${oppositeAngle}deg, transparent 49%, ${color} 49%, transparent 51%)
+                `;
+            }
+
+
+            liner.style.backgroundSize = "100%";
+        });
+
+    </script>
 
 <div class="container" style="height: 100vh;">
     <div class="admin-about-panel p-3">

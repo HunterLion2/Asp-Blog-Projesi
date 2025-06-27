@@ -70,62 +70,76 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int>
             {
                 new KonularModel {
                     Id = 1,
-                    Konu = "Finans"
+                    Konu = "Finans",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
 
                 new KonularModel {
                     Id = 2,
-                    Konu = "Yazılım / Programlama"
+                    Konu = "Yazılım / Programlama",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
 
                 new KonularModel {
                     Id = 3,
-                    Konu = "Kişisel Gelişim"
+                    Konu = "Kişisel Gelişim",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
 
                 new KonularModel {
                     Id = 4,
-                    Konu = "Günlük Yaşam"
+                    Konu = "Günlük Yaşam",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 5,
-                    Konu = "Eğitim"
+                    Konu = "Eğitim",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 6,
-                    Konu = "Seyahat"
+                    Konu = "Seyahat",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 7,
-                    Konu = "Sağlık & Fitness"
+                    Konu = "Sağlık & Fitness",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 8,
-                    Konu = "Kitap / Film / Dizi İncelemeleri"
+                    Konu = "Kitap / Film / Dizi İncelemeleri",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 9,
-                    Konu = "Girişimcilik"
+                    Konu = "Girişimcilik",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 10,
-                    Konu = "Bilim"
+                    Konu = "Bilim",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 11,
-                    Konu = "Fotoğrafçılık"
+                    Konu = "Fotoğrafçılık",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 12,
-                    Konu = "Finans / Ekonomi"
+                    Konu = "Finans / Ekonomi",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 13,
-                    Konu = "Moda & Stil"
+                    Konu = "Moda & Stil",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
                 new KonularModel {
                     Id = 14,
-                    Konu = "Yemek Tarifleri"
+                    Konu = "Yemek Tarifleri",
+                    Resim = "~/img/category/finansyonetimi.png"
                 },
             }
         );
