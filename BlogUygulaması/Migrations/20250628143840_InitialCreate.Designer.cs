@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogUygulaması.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250615132109_AddKonularModelKey")]
-    partial class AddKonularModelKey
+    [Migration("20250628143840_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -126,7 +126,16 @@ namespace BlogUygulaması.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Resim")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("WordModelId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("WordModelId");
 
                     b.ToTable("KonularModel");
 
@@ -134,72 +143,86 @@ namespace BlogUygulaması.Migrations
                         new
                         {
                             Id = 1,
-                            Konu = "Finans"
+                            Konu = "Finans",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 2,
-                            Konu = "Yazılım / Programlama"
+                            Konu = "Yazılım / Programlama",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 3,
-                            Konu = "Kişisel Gelişim"
+                            Konu = "Kişisel Gelişim",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 4,
-                            Konu = "Günlük Yaşam"
+                            Konu = "Günlük Yaşam",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 5,
-                            Konu = "Eğitim"
+                            Konu = "Eğitim",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 6,
-                            Konu = "Seyahat"
+                            Konu = "Seyahat",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 7,
-                            Konu = "Sağlık & Fitness"
+                            Konu = "Sağlık & Fitness",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 8,
-                            Konu = "Kitap / Film / Dizi İncelemeleri"
+                            Konu = "Kitap / Film / Dizi İncelemeleri",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 9,
-                            Konu = "Girişimcilik"
+                            Konu = "Girişimcilik",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 10,
-                            Konu = "Bilim"
+                            Konu = "Bilim",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 11,
-                            Konu = "Fotoğrafçılık"
+                            Konu = "Fotoğrafçılık",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 12,
-                            Konu = "Finans / Ekonomi"
+                            Konu = "Finans / Ekonomi",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 13,
-                            Konu = "Moda & Stil"
+                            Konu = "Moda & Stil",
+                            Resim = "~/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 14,
-                            Konu = "Yemek Tarifleri"
+                            Konu = "Yemek Tarifleri",
+                            Resim = "~/img/category/finansyonetimi.png"
                         });
                 });
 
@@ -220,10 +243,6 @@ namespace BlogUygulaması.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Konu")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("MiniAciklama")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -242,37 +261,6 @@ namespace BlogUygulaması.Migrations
                             AnaBaşlık = "Dolar Ve Euro Arasındaki Kapışma",
                             Açıklama = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.",
                             DateTime = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Konu = "Finans",
-                            MiniAciklama = "Kısa açıklama burada",
-                            ResimDosyaAdi = "resim.jpg"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AnaBaşlık = "Doğanın Sorunları",
-                            Açıklama = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.",
-                            DateTime = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Konu = "Doğa",
-                            MiniAciklama = "Kısa açıklama burada",
-                            ResimDosyaAdi = "image.jpg"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AnaBaşlık = "İntel Ve Amd Arasındaki Savaş",
-                            Açıklama = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.",
-                            DateTime = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Konu = "Finans",
-                            MiniAciklama = "Kısa açıklama burada",
-                            ResimDosyaAdi = "resim.jpg"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AnaBaşlık = "Trafik Cezalarındaki Artış",
-                            Açıklama = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.",
-                            DateTime = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Konu = "Güncel",
                             MiniAciklama = "Kısa açıklama burada",
                             ResimDosyaAdi = "resim.jpg"
                         });
@@ -377,6 +365,13 @@ namespace BlogUygulaması.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BlogUygulaması.Models.KonularModel", b =>
+                {
+                    b.HasOne("BlogUygulaması.Models.WordModel", null)
+                        .WithMany("Konular")
+                        .HasForeignKey("WordModelId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("BlogUygulaması.Models.AppRole", null)
@@ -426,6 +421,11 @@ namespace BlogUygulaması.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BlogUygulaması.Models.WordModel", b =>
+                {
+                    b.Navigation("Konular");
                 });
 #pragma warning restore 612, 618
         }

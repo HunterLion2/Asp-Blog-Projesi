@@ -56,7 +56,7 @@ public class AdminController : Controller
 
             var word = new WordModel()
             {
-                Konu = model.Word.Konu,
+                Konular = model.Word.Konular,
                 AnaBaşlık = model.Word.AnaBaşlık,
                 DateTime = model.Word.DateTime,
                 Açıklama = model.Word.Açıklama,
@@ -69,7 +69,7 @@ public class AdminController : Controller
 
             return RedirectToAction("Index", "Admin");
         }
-        
+
         model.KonularList = _dataContext.KonularModel.ToList();
         return View(model);
     }
@@ -136,7 +136,7 @@ public class AdminController : Controller
                 }
             }
 
-            result.Konu = model.Konu;
+            result.Konular = model.Konular;
             result.AnaBaşlık = model.AnaBaşlık;
             result.DateTime = model.DateTime;
             result.Açıklama = model.Açıklama;

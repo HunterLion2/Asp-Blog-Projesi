@@ -37,7 +37,7 @@ public class CreateWordController : Controller
             var word = new WordModel()
             {
                 Id = model.Id,
-                Konu = model.Konu,
+                Konular = model.Konular,
                 AnaBaşlık = model.AnaBaşlık,
                 DateTime = model.DateTime,
                 Açıklama = model.Açıklama,

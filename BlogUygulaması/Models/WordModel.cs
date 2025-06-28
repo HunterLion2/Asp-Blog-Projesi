@@ -14,7 +14,7 @@ public class WordModel
 
     [Required]
     [Display(Name = "Konu")]
-    public string Konu { get; set; } = null!;
+    public List<KonularModel> Konular { get; set; } = null!;
 
     [Required]
     [Display(Name = "DateTime")]

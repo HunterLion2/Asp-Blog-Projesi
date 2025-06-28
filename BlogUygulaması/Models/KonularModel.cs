@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace BlogUygulaması.Models;
+
 public class KonularModel
 {
 

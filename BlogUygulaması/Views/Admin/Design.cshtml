@@ -37,14 +37,14 @@
 
                         <input asp-for="Resim" type="file" class="form-control mt-2">
 
-                        <select asp-for="Konu" class="form-control mt-2">
+                        <select asp-for="Konular" class="form-control mt-2">
                             <option value="">Kategori Seçiniz</option>
                             <option value="teknoloji">Teknoloji</option>
                             <option value="günlük">Günlük</option>
                             <option value="kişisel">Kişisel</option>
                             <option value="diğer">Diğer</option>
                         </select>
-                        <span asp-validation-for="Konu" class="text-danger"></span>
+                        <span asp-validation-for="Konular" class="text-danger"></span>
                     </div>
                     <div class="col-md-8 mt-2">
                         <textarea asp-for="Açıklama" id="maintext" class="form-control" rows="30"

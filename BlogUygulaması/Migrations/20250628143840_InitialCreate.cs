@@ -56,26 +56,12 @@ namespace BlogUygulaması.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "KonularModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Konu = table.Column<string>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_KonularModel", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "WordModels",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ResimDosyaAdi = table.Column<string>(type: "TEXT", nullable: true),
-                    Konu = table.Column<string>(type: "TEXT", nullable: false),
                     DateTime = table.Column<DateTime>(type: "TEXT", nullable: false),
                     AnaBaşlık = table.Column<string>(type: "TEXT", nullable: false),
                     Açıklama = table.Column<string>(type: "TEXT", nullable: false),
@@ -192,26 +178,51 @@ namespace BlogUygulaması.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "KonularModel",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Konu = table.Column<string>(type: "TEXT", nullable: false),
+                    Resim = table.Column<string>(type: "TEXT", nullable: false),
+                    WordModelId = table.Column<int>(type: "INTEGER", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KonularModel", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_KonularModel_WordModels_WordModelId",
+                        column: x => x.WordModelId,
+                        principalTable: "WordModels",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.InsertData(
                 table: "KonularModel",
-                columns: new[] { "Id", "Konu" },
+                columns: new[] { "Id", "Konu", "Resim", "WordModelId" },
                 values: new object[,]
                 {
-                    { 1, "Finans" },
-                    { 2, "Doğa" },
-                    { 3, "Güncel" }
+                    { 1, "Finans", "~/img/category/finansyonetimi.png", null },
+                    { 2, "Yazılım / Programlama", "~/img/category/finansyonetimi.png", null },
+                    { 3, "Kişisel Gelişim", "~/img/category/finansyonetimi.png", null },
+                    { 4, "Günlük Yaşam", "~/img/category/finansyonetimi.png", null },
+                    { 5, "Eğitim", "~/img/category/finansyonetimi.png", null },
+                    { 6, "Seyahat", "~/img/category/finansyonetimi.png", null },
+                    { 7, "Sağlık & Fitness", "~/img/category/finansyonetimi.png", null },
+                    { 8, "Kitap / Film / Dizi İncelemeleri", "~/img/category/finansyonetimi.png", null },
+                    { 9, "Girişimcilik", "~/img/category/finansyonetimi.png", null },
+                    { 10, "Bilim", "~/img/category/finansyonetimi.png", null },
+                    { 11, "Fotoğrafçılık", "~/img/category/finansyonetimi.png", null },
+                    { 12, "Finans / Ekonomi", "~/img/category/finansyonetimi.png", null },
+                    { 13, "Moda & Stil", "~/img/category/finansyonetimi.png", null },
+                    { 14, "Yemek Tarifleri", "~/img/category/finansyonetimi.png", null }
                 });
 
             migrationBuilder.InsertData(
                 table: "WordModels",
-                columns: new[] { "Id", "AnaBaşlık", "Açıklama", "DateTime", "Konu", "MiniAciklama", "ResimDosyaAdi" },
-                values: new object[,]
-                {
-                    { 1, "Dolar Ve Euro Arasındaki Kapışma", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Finans", "Kısa açıklama burada", "resim.jpg" },
-                    { 2, "Doğanın Sorunları", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Doğa", "Kısa açıklama burada", "image.jpg" },
-                    { 3, "İntel Ve Amd Arasındaki Savaş", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Finans", "Kısa açıklama burada", "resim.jpg" },
-                    { 4, "Trafik Cezalarındaki Artış", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Güncel", "Kısa açıklama burada", "resim.jpg" }
-                });
+                columns: new[] { "Id", "AnaBaşlık", "Açıklama", "DateTime", "MiniAciklama", "ResimDosyaAdi" },
+                values: new object[] { 1, "Dolar Ve Euro Arasındaki Kapışma", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.", new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kısa açıklama burada", "resim.jpg" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -249,6 +260,11 @@ namespace BlogUygulaması.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KonularModel_WordModelId",
+                table: "KonularModel",
+                column: "WordModelId");
         }
 
         /// <inheritdoc />
@@ -273,13 +289,13 @@ namespace BlogUygulaması.Migrations
                 name: "KonularModel");
 
             migrationBuilder.DropTable(
-                name: "WordModels");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "WordModels");
         }
     }
 }
