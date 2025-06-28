@@ -37,30 +37,30 @@ public class AdminController : Controller
     }
 
     [HttpPost]
-    public async Task<ActionResult> Create(WordModel model)
+    public async Task<ActionResult> Create(BlogCreateViewModel model)
     {
         if (ModelState.IsValid)
         {
             string fileName = null;
-            if (model.Resim != null && model.Resim.Length > 0)
+            if (model.Word.Resim != null && model.Word.Resim.Length > 0)
             {
-                var extension = Path.GetExtension(model.Resim.FileName);
+                var extension = Path.GetExtension(model.Word.Resim.FileName);
                 fileName = Path.GetRandomFileName() + extension;
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
-                    await model.Resim.CopyToAsync(stream);
+                    await model.Word.Resim.CopyToAsync(stream);
                 }
             }
 
             var word = new WordModel()
             {
-                Konu = model.Konu,
-                AnaBaşlık = model.AnaBaşlık,
-                DateTime = model.DateTime,
-                Açıklama = model.Açıklama,
-                MiniAciklama = model.MiniAciklama,
+                Konu = model.Word.Konu,
+                AnaBaşlık = model.Word.AnaBaşlık,
+                DateTime = model.Word.DateTime,
+                Açıklama = model.Word.Açıklama,
+                MiniAciklama = model.Word.MiniAciklama,
                 ResimDosyaAdi = fileName
             };
 
@@ -69,6 +69,8 @@ public class AdminController : Controller
 
             return RedirectToAction("Index", "Admin");
         }
+        
+        model.KonularList = _dataContext.KonularModel.ToList();
         return View(model);
     }
 

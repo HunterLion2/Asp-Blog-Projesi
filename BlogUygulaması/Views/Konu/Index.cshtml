@@ -1,15 +1,41 @@
 @model List<KonularModel>
 
+<style>
+    svg {
+        width: 27px;
+        height: 27px;
+        flex-shrink: 0;
+    }
+</style>
+
 <div class="mx-3 mt-4">
     <div class="row">
         @foreach (var result in Model)
         {
             <div class="col-md-3">
-                <div class="rounded rounded-4" style="background-image: @result.Resim;" id="Konular">
-                    <a class="text-center p-4" style="height: 110px; color: #b6b6b6;">@result.Konu</a>
+                <div class="rounded rounded-4" style="background: @result.Resim; height: 50vh;" id="Konular">
+                    <h4 class="text-center p-4" style="height: 110px; color: #b6b6b6;">@result.Konu</h4>
                 </div>
             </div>
+            
         }
+    @* <div class="row text-center">
+        <div class="col-md-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <circle cx="13.5" cy="13.5" r="13.5" fill="black" />
+            </svg>
+        </div>
+        <div class="col-md-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <circle cx="13.5" cy="13.5" r="13.5" fill="black" />
+            </svg>
+        </div>
+        <div class="col-md-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <circle cx="13.5" cy="13.5" r="13.5" fill="black" />
+            </svg>
+        </div>
+    </div>         *@
     </div>
-</div>
 
+</div>

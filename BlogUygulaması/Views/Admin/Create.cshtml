@@ -41,7 +41,7 @@
                         <select asp-for="@Model.Word.Konu" class="form-control mt-2">
                             <option value="">Kategori Seçiniz</option>
                             @foreach(var result in Model.KonularList) {
-                                <option value="">@result.Konu</option>
+                                <option value="@result.Konu">@result.Konu</option>
                             }
                         </select>
                         <span asp-validation-for="@Model.Word.Konu" class="text-danger"></span>
