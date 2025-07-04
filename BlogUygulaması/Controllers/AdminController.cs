@@ -56,7 +56,7 @@ public class AdminController : Controller
 
             var word = new WordModel()
             {
-                Konular = model.Word.Konular,
+                KonularId = model.Word.KonularId,
                 AnaBaşlık = model.Word.AnaBaşlık,
                 DateTime = model.Word.DateTime,
                 Açıklama = model.Word.Açıklama,

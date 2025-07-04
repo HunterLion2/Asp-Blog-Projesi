@@ -37,10 +37,9 @@
 
                         <input asp-for="@Model.Word.Resim" class="form-control mt-2">
 
-                        <select asp-for="@Model.Word.Konular" class="form-control mt-2">
-                            <option value="">Kategori Seçiniz</option>
+                        <select asp-for="@Model.Word.KonularId" class="form-select mt-2">
                             @foreach(var result in Model.KonularList) {
-                                <option value="@result.Konu">@result.Konu</option>
+                                <option value="@result.Id">@result.Konu</option>
                             }
                         </select>
                     </div>

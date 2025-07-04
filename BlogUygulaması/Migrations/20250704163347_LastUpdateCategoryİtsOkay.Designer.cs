@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogUygulaması.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250628143840_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250704163347_LastUpdateCategoryİtsOkay")]
+    partial class LastUpdateCategoryİtsOkay
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -130,12 +130,7 @@ namespace BlogUygulaması.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("WordModelId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("WordModelId");
 
                     b.ToTable("KonularModel");
 
@@ -243,6 +238,9 @@ namespace BlogUygulaması.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("KonularId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("MiniAciklama")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -251,6 +249,8 @@ namespace BlogUygulaması.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("KonularId");
 
                     b.ToTable("WordModels");
 
@@ -261,6 +261,7 @@ namespace BlogUygulaması.Migrations
                             AnaBaşlık = "Dolar Ve Euro Arasındaki Kapışma",
                             Açıklama = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ducimus tenetur impedit qui, dignissimos ea, omnis quisquam deleniti veniam laudantium, exercitationem voluptatem sit commodi. Minima aperiam voluptates, quasi a cumque dolorem, eum repellat rem dicta neque pariatur. Maiores fugiat doloremque placeat, voluptatum nobis repudiandae dolores consequatur dicta ratione non.",
                             DateTime = new DateTime(2025, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            KonularId = 1,
                             MiniAciklama = "Kısa açıklama burada",
                             ResimDosyaAdi = "resim.jpg"
                         });
@@ -365,11 +366,15 @@ namespace BlogUygulaması.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("BlogUygulaması.Models.KonularModel", b =>
+            modelBuilder.Entity("BlogUygulaması.Models.WordModel", b =>
                 {
-                    b.HasOne("BlogUygulaması.Models.WordModel", null)
-                        .WithMany("Konular")
-                        .HasForeignKey("WordModelId");
+                    b.HasOne("BlogUygulaması.Models.KonularModel", "Konular")
+                        .WithMany()
+                        .HasForeignKey("KonularId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Konular");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -421,11 +426,6 @@ namespace BlogUygulaması.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("BlogUygulaması.Models.WordModel", b =>
-                {
-                    b.Navigation("Konular");
                 });
 #pragma warning restore 612, 618
         }

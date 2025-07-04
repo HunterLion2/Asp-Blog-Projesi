@@ -13,8 +13,10 @@ public class WordModel
     public string? ResimDosyaAdi { get; set; }
 
     [Required]
+    public int KonularId { get; set; }
+    
     [Display(Name = "Konu")]
-    public List<KonularModel> Konular { get; set; } = null!;
+    public KonularModel? Konular { get; set; } = null!;
 
     [Required]
     [Display(Name = "DateTime")]
