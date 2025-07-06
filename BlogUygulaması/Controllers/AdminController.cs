@@ -39,6 +39,8 @@ public class AdminController : Controller
     [HttpPost]
     public async Task<ActionResult> Create(BlogCreateViewModel model)
     {
+        ModelState.Remove("KonularList");
+
         if (ModelState.IsValid)
         {
             string fileName = null;

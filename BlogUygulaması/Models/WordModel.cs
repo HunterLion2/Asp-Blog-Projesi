@@ -12,7 +12,6 @@ public class WordModel
     public IFormFile Resim { get; set; } = null!;
     public string? ResimDosyaAdi { get; set; }
 
-    [Required]
     public int KonularId { get; set; }
     
     [Display(Name = "Konu")]

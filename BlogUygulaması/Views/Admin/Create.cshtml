@@ -27,24 +27,27 @@
                 <div class="row">
                     <div asp-validation-summary="All"></div>
                     <div class="col-md-4 mt-2">
-                        <input asp-for="@Model.Word.AnaBaşlık" class="form-control" placeholder="Başlık">
-                        <span asp-validation-for="@Model.Word.AnaBaşlık" class="text-danger"></span>
+                        <input asp-for="Word.AnaBaşlık" class="form-control" placeholder="Başlık">
+                        <span asp-validation-for="Word.AnaBaşlık" class="text-danger"></span>
 
-                        <input asp-for="@Model.Word.DateTime" class="form-control mt-2">
+                        <input asp-for="Word.DateTime" class="form-control mt-2">
 
-                        <span asp-validation-for="@Model.Word.MiniAciklama" class="text-danger"></span>
-                        <textarea asp-for="@Model.Word.MiniAciklama" class="form-control mt-2" rows="5" placeholder="Mini Açıklama Giriniz" id=""></textarea>
+                        <span asp-validation-for="Word.MiniAciklama" class="text-danger"></span>
+                        <textarea asp-for="Word.MiniAciklama" class="form-control mt-2" rows="5" placeholder="Mini Açıklama Giriniz" id=""></textarea>
 
-                        <input asp-for="@Model.Word.Resim" class="form-control mt-2">
+                        <input asp-for="Word.Resim" class="form-control mt-2">
 
-                        <select asp-for="@Model.Word.KonularId" class="form-select mt-2">
+                        <select asp-for="Word.KonularId" class="form-select mt-2">
+                            <option selected>Kategori Seçiniz</option>
                             @foreach(var result in Model.KonularList) {
                                 <option value="@result.Id">@result.Konu</option>
                             }
                         </select>
+
+
                     </div>
                     <div class="col-md-8 mt-2">
-                        <textarea asp-for="@Model.Word.Açıklama" id="maintext" class="form-control" rows="30" placeholder="Yazınızı buraya girin..."></textarea>
+                        <textarea asp-for="Word.Açıklama" id="maintext" class="form-control" rows="30" placeholder="Yazınızı buraya girin..."></textarea>
                     </div>
                 </div>
                 <div class="row">
