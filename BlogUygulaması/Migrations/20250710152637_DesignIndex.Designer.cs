@@ -3,6 +3,7 @@ using System;
 using BlogUygulaması.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogUygulaması.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250710152637_DesignIndex")]
+    partial class DesignIndex
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.5");
@@ -142,73 +145,79 @@ namespace BlogUygulaması.Migrations
                         {
                             Id = 2,
                             Konu = "Yazılım / Programlama",
-                            Resim = "/img/category/hangi_programlama_dili-740x555.jpg"
+                            Resim = "/img/category/finans-yonetimi.png"
                         },
                         new
                         {
                             Id = 3,
                             Konu = "Kişisel Gelişim",
-                            Resim = "/img/category/indir.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 4,
                             Konu = "Günlük Yaşam",
-                            Resim = "/img/category/gunluk.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 5,
                             Konu = "Eğitim",
-                            Resim = "/img/category/egitim.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 6,
                             Konu = "Seyahat",
-                            Resim = "/img/category/seyahet.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 7,
                             Konu = "Sağlık & Fitness",
-                            Resim = "/img/category/saglık.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 8,
                             Konu = "Kitap / Film / Dizi İncelemeleri",
-                            Resim = "/img/category/inceleme.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 9,
                             Konu = "Girişimcilik",
-                            Resim = "/img/category/girisimcilik.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 10,
                             Konu = "Bilim",
-                            Resim = "/img/category/Bilim.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 11,
                             Konu = "Fotoğrafçılık",
-                            Resim = "/img/category/fotografcılık.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 12,
                             Konu = "Finans / Ekonomi",
-                            Resim = "/img/category/Finans.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
                         },
                         new
                         {
                             Id = 13,
                             Konu = "Moda & Stil",
-                            Resim = "/img/category/Moda.jpg"
+                            Resim = "/img/category/finansyonetimi.png"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Konu = "Yemek Tarifleri",
+                            Resim = "/img/category/finansyonetimi.png"
                         });
                 });
 
