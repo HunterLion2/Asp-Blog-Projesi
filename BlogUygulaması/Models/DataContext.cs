@@ -25,70 +25,57 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int>
                 new KonularModel {
                     Id = 1,
                     Konu = "Finans",
-                    Resim = "/img/category/finans-yonetimi.png"
                 },
 
                 new KonularModel {
                     Id = 2,
                     Konu = "Yazılım / Programlama",
-                    Resim = "/img/category/hangi_programlama_dili-740x555.jpg"
                 },
 
                 new KonularModel {
                     Id = 3,
                     Konu = "Kişisel Gelişim",
-                    Resim = "/img/category/indir.jpg"
                 },
 
                 new KonularModel {
                     Id = 4,
                     Konu = "Günlük Yaşam",
-                    Resim = "/img/category/gunluk.jpg"
                 },
                 new KonularModel {
                     Id = 5,
                     Konu = "Eğitim",
-                    Resim = "/img/category/egitim.jpg"
                 },
                 new KonularModel {
                     Id = 6,
                     Konu = "Seyahat",
-                    Resim = "/img/category/seyahet.jpg"
                 },
                 new KonularModel {
                     Id = 7,
                     Konu = "Sağlık & Fitness",
-                    Resim = "/img/category/saglık.jpg"
                 },
                 new KonularModel {
                     Id = 8,
                     Konu = "Kitap / Film / Dizi İncelemeleri",
-                    Resim = "/img/category/inceleme.jpg"
                 },
                 new KonularModel {
                     Id = 9,
                     Konu = "Girişimcilik",
-                    Resim = "/img/category/girisimcilik.jpg"
                 },
                 new KonularModel {
                     Id = 10,
                     Konu = "Bilim",
-                    Resim = "/img/category/Bilim.jpg"
                 },
                 new KonularModel {
                     Id = 11,
                     Konu = "Fotoğrafçılık",
-                    Resim = "/img/category/fotografcılık.jpg"
                 },
                 new KonularModel {
                     Id = 12,
                     Konu = "Finans / Ekonomi",
-                    Resim = "/img/category/Finans.jpg"
                 },
                 new KonularModel {
                     Id = 13,
                     Konu = "Moda & Stil",
-                    Resim = "/img/category/Moda.jpg"
                 },
             }
         );        

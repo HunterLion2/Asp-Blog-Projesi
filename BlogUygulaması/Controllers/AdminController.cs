@@ -19,9 +19,10 @@ public class AdminController : Controller
         _userManager = userManager;
     }
 
-    public ActionResult Index()
+    [HttpGet]
+    public async Task<IActionResult> Index()
     {
-        var result = _dataContext.WordModels.ToList();
+        var result = _dataContext.WordModels.Include(w => w.Konular).ToList();
 
         return View(result);
     }

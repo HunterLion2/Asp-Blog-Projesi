@@ -148,7 +148,6 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\rjsmr
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\scopedcss\bundle\BlogUygulaması.styles.css
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\jgjkzpq6su-5ipweew5fc.gz
-C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-6wbfa22r6x.gz
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\u26qo5fxk2-61n19gt1b8.gz
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\2pfyx6xv3n-1kz3elmejl.gz
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\rjh7comvm9-z0dg3cpqbs.gz
@@ -228,3 +227,4 @@ C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\refin
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\BlogUygulaması.pdb
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\BlogUygulaması.genruntimeconfig.cache
 C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\ref\BlogUygulaması.dll
+C:\Users\cozgu\Documents\Asp-Blog-Projesi\BlogUygulaması\obj\Debug\net9.0\compressed\55tqezpeld-by9exha623.gz
