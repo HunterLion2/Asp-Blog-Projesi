@@ -53,13 +53,19 @@
 }
 
 #home-word {
-    background-color: rgb(255, 255, 255, 0.3);
-    backdrop-filter: blur(25px);
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+}
+
+#otherword {
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
 }
 
 .home-link.h1 {
     text-decoration: none;
-    
 }
 
 .like-number {

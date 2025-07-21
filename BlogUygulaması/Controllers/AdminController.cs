@@ -161,6 +161,11 @@ public class AdminController : Controller
         return View(result);
     }
 
+    public ActionResult RoleManagement()
+    {
+        return View();
+    }
+
 }
 
 

@@ -1,4 +1,4 @@
-@model List<WordModel>
+@model List<RoleModel>
 
 @{
     Layout = "_AdminLayout";
@@ -10,9 +10,6 @@
             <div class="row">
                 <div class="col-6">
                     <a class="admin mt-4" asp-controller="Admin" asp-action="UserManagement">Kullanıcı Yönetimi</a>
-                </div>
-                <div class="col-6">
-                    <a class="admin mt-4" asp-controller="Admin" asp-action="RoleManagement">Rol Yönetimi</a>
                 </div>
             </div>
         </div>
@@ -26,42 +23,19 @@
                 <thead>
                     <tr>
                         <th scope="col" class="text-center fs-5">Id</th>
-                        <th scope="col" class="text-center fs-5">Başlık</th>
-                        <th scope="col" class="text-center fs-5">Zaman</th>
-                        <th scope="col" class="text-center fs-5">Konu</th>
-                        <th scope="col" class="text-center fs-5">Düzenleme</th>
-                        <th scope="col" class="text-center fs-5">Silme</th>
+                        <th scope="col" class="text-center fs-5">Rol Adı</th>
                         <th class="text-center"><a asp-controller="Admin" asp-action="Create" class="btn btn-success"><i
                                     class="fa-solid fa-plus"></i></a></th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    @if (Model.Any())
-                    {
-                        @foreach (var result in Model)
-                        {
-                            <tr>
-                                <th scope="row" class="p-3 text-center">@result.Id</th>
-                                <th scope="row" class="p-3 text-center">@result.AnaBaşlık</th>
-                                <th scope="row" class="p-3 text-center">@result.DateTime</th>
-                                <th scope="row" class="p-3 text-center">@result.Konular.Konu</th>
-                                <th class="text-center"><a asp-controller="Admin" asp-action="Design" asp-route-id="@result.Id"
-                                        class="btn btn-light"> <i class="fa-solid fa-sliders"></i></a></th>
-                                <th class="text-center"><a asp-controller="Admin" asp-action="Delete" asp-route-id="@result.Id"
-                                        class="btn btn-danger"><i class="fa-solid fa-eraser"></i></a></th>
-                            </tr>
-                        }
-                    }
-                    else
+                    @foreach (var role in Model)
                     {
                         <tr>
-                            <div class="alert alert-warning">
-                                <div class="text-center">
-                                    <h4>Şuan da bir blog yazısı bulunmamaktadır.</h4>
-                                </div>
-                            </div>
+                            <th scope="col" class="text-center">@role.RoleAdi</th>
                         </tr>
                     }
+
                 </tbody>
             </table>
         </div>
