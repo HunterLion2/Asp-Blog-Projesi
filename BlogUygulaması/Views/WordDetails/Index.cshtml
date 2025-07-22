@@ -1,7 +1,7 @@
 @model WordModel
 
 <style>
-    h2 {
+    #mainHead {
         background-color: rgb(252, 235, 86,0.6);
     }
 
@@ -12,16 +12,10 @@
         background-size: 90px 90px;
     }
 
-    footer {
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-    }
 </style>
 
 <div class="container mt-5">
-    <h2 class="p-2 rounded w-50">@Model.AnaBaşlık</h2>
+    <h2 id="mainHead" class="p-2 rounded w-50">@Model.AnaBaşlık</h2>
     <div id="home-word">
         <div class="row p-4 rounded ">
             <div class="col-md-10">
