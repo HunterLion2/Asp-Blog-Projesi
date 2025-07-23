@@ -14,13 +14,19 @@ public class HomeController : Controller
 
     public ActionResult Index(string Search)
     {
-
-
         var yazilar = _context.WordModels.OrderByDescending(w => w.DateTime).Take(3).ToList();
 
-        var digerYazilar = _context.WordModels.OrderByDescending(w => w.DateTime).Skip(3).ToList();
+        if (Search != null) {
+            var digerYazilar = _context.WordModels.Where(w => w.AnaBaşlık.Contains(Search));
 
-        ViewBag.DigerYazilar = digerYazilar;
+            ViewBag.DigerYazilar = digerYazilar;
+        }
+        else {
+            var digerYazilar = _context.WordModels.OrderByDescending(w => w.DateTime).Skip(3).ToList();
+
+            ViewBag.DigerYazilar = digerYazilar;
+        }
+
 
         return View(yazilar);
     }
