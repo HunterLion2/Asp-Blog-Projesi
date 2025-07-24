@@ -97,8 +97,6 @@
 /*Hakkımda Bölümü*/
 
 .admin-about-panel {
-    width: 1436px;
-    height: 810px;
     flex-shrink: 0;
     border-radius: 5px;
     margin-top: 100px;
@@ -109,10 +107,9 @@
 
 .my-name {
     color: #000;
-    font-family: "Lobster Two", sans-serif;
-    font-size: 40px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
 }
 
@@ -125,18 +122,17 @@
 
 .my-learned {
     color: #000;
-    font-family: "Lobster Two", sans-serif;
+    font-family: "Barlow", sans-serif;
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
     line-height: normal;
 }
 
 .my-explain {
     color: #000;
-    font-family: "Port Lligat Sans";
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }

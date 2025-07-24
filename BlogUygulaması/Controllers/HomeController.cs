@@ -17,17 +17,17 @@ public class HomeController : Controller
         var yazilar = _context.WordModels.OrderByDescending(w => w.DateTime).Take(3).ToList();
 
         if (Search != null) {
-            var digerYazilar = _context.WordModels.Where(w => w.AnaBaşlık.Contains(Search));
+
+            var digerYazilar = _context.WordModels.Where(w => w.AnaBaşlık.ToLower().Contains(Search.ToLower()));
 
             ViewBag.DigerYazilar = digerYazilar;
         }
-        else {
+        else
+        {
             var digerYazilar = _context.WordModels.OrderByDescending(w => w.DateTime).Skip(3).ToList();
 
             ViewBag.DigerYazilar = digerYazilar;
         }
-
-
         return View(yazilar);
     }
 
